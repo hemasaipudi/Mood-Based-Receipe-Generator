@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffe6e6, #fff0f5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.mood-container {
+    background-color: #ffffffcc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Heading */
+.mood-container h1 {
+    margin-bottom: 20px;
+    color: #ff6f61;
+    font-size: 2rem;
+}
+
+/* Mood Buttons */
+.mood-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.mood-buttons button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mood-buttons button:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.1);
+}
+
+/* Recipe Display */
+.recipe-display {
+    background-color: #fff5ee;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 120px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Mood-Based Color Themes */
+button[data-mood="happy"]:hover ~ .recipe-display {
+    background-color: #fffacd; /* light yellow */
+}
+
+button[data-mood="sad"]:hover ~ .recipe-display {
+    background-color: #add8e6; /* light blue */
+}
+
+button[data-mood="energetic"]:hover ~ .recipe-display {
+    background-color: #ffcccb; /* light red */
+}
+
+button[data-mood="relaxed"]:hover ~ .recipe-display {
+    background-color: #d1ffd6; /* light green */
+}
+
+/* Recipe text style */
+.recipe-display p {
+    font-size: 1.1rem;
+    color: #333;
+}
