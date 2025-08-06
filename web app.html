@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood-Based Recipe Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mood-Based Recipe Generator</h1>
+        <p>Select your current mood and get a recipe suggestion!</p>
+
+        <select id="moodSelect">
+            <option value="">--Select Mood--</option>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="stressed">Stressed</option>
+            <option value="energetic">Energetic</option>
+            <option value="romantic">Romantic</option>
+        </select>
+        <button onclick="getRecipe()">Get Recipe</button>
+
+        <div class="recipe-result" id="recipeResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
